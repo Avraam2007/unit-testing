@@ -1,34 +1,38 @@
 class NumbersValidator {
-    isNumberEven(number) {
-        const typeOfVariable = typeof number;
-        if(typeOfVariable !== 'number') {
-            throw new Error(`[${number}] is not of type "Number" it is of type "${typeOfVariable}"`);
-        }
-        else {
-            return number % 2 === 0;
-        }
+  isNumberEven(number) {
+    const typeOfVariable = typeof number;
+    if (typeOfVariable !== "number") {
+      throw new Error(
+        `[${number}] is not of type "Number" it is of type "${typeOfVariable}"`,
+      );
+    } else {
+      return number % 2 === 0;
     }
+  }
 
-    getEvenNumbersFromArray(arrayOfNumbers) {
-        if(Array.isArray(arrayOfNumbers) && arrayOfNumbers.every(item=>typeof item === 'number')) {
-            return arrayOfNumbers.filter(this.isNumberEven);
-        }
-        throw new Error(`[${arrayOfNumbers}] is not an array of "Numbers"`);
+  getEvenNumbersFromArray(arrayOfNumbers) {
+    if (
+      Array.isArray(arrayOfNumbers) &&
+      arrayOfNumbers.every((item) => typeof item === "number")
+    ) {
+      return arrayOfNumbers.filter(this.isNumberEven);
     }
+    throw new Error(`[${arrayOfNumbers}] is not an array of "Numbers"`);
+  }
 
-    isAllNumbers(arrayOfNumbers) {
-        if(!Array.isArray(arrayOfNumbers)) {
-            throw new Error(`[${arrayOfNumbers}] is not an array`);
-        }
-        return arrayOfNumbers.every(item=>typeof item === 'number');
+  isAllNumbers(arrayOfNumbers) {
+    if (!Array.isArray(arrayOfNumbers)) {
+      throw new Error(`[${arrayOfNumbers}] is not an array`);
     }
+    return arrayOfNumbers.every((item) => typeof item === "number");
+  }
 
-    isInteger(n) {
-        if(typeof n !== 'number') {
-            throw new Error(`[${n}] is not a number`);
-        }
-        return Number.isInteger(n);
+  isInteger(n) {
+    if (typeof n !== "number") {
+      throw new Error(`[${n}] is not a number`);
     }
+    return Number.isInteger(n);
+  }
 }
 
 module.exports = NumbersValidator;
