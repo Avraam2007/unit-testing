@@ -6,15 +6,24 @@
   "scripts": {
     "test": "mocha",
     "coverage": "c8 npm test",
-    "lint" : "eslint ./ --fix"
+    "lint": "eslint ./ --fix",
+    "prepare": "husky"
   },
+  "lint-staged": {
+    "*.{js}": [
+      "eslint ./ --fix --no-cache --max-warnings=0"
+    ]
+  }
+  ,
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "eslint": "^10.0.3",
-    "globals": "^17.4.0"
+    "globals": "^17.4.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.4.0"
   },
   "dependencies": {
     "c8": "^11.0.0",
