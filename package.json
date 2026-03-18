@@ -1,0 +1,25 @@
+{
+  "name": "unit-testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "coverage": "c8 npm test",
+    "lint" : "eslint ./ --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.0.3",
+    "globals": "^17.4.0"
+  },
+  "dependencies": {
+    "c8": "^11.0.0",
+    "chai": "^4.5.0",
+    "mocha": "^11.7.5",
+    "mochawesome": "^7.1.4"
+  }
+}
