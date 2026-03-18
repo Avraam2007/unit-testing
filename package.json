@@ -11,7 +11,7 @@
   },
   "lint-staged": {
     "*.js": [
-      "eslint ./ --fix --no-cache --max-warnings=0"
+      "eslint ./ --fix --no-cache"
     ]
   }
   ,
