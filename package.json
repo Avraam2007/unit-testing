@@ -2,7 +2,7 @@
   "name": "unit-testing",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "number-validators.js",
   "scripts": {
     "test": "mocha",
     "coverage": "c8 npm test",

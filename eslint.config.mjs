@@ -23,7 +23,7 @@ export default defineConfig([
       "prefer-arrow-callback": "off",
       "func-names": "off",
       "object-curly-newline": "off",
-      "no-undef": "warn",
+      "no-undef": "off",
     },
   },
 ]);
