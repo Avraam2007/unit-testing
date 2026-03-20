@@ -29,7 +29,7 @@ describe("Testing isInteger function", () => {
   });
 
   it("should throw error if value isn't number", () => {
-    const value = undefined;
+    const value = null;
     expect(() => {
       validator.isInteger(value);
     }).to.throw(`[${value}] is not a number`);
