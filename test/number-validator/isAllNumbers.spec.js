@@ -27,7 +27,7 @@ describe("Testing isAllNumbers function", () => {
   });
 
   it("should throw error if value is not number", () => {
-    const value = null;
+    const value = undefined;
     expect(() => {
       validator.isAllNumbers(value);
     }).to.throw(`[${value}] is not an array`);
